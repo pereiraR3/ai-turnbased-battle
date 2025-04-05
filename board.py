@@ -9,7 +9,7 @@ pygame.init()
 
 # Configuration
 PROGRAM_1 = ['python', 'ia-dummy.py'] 
-PROGRAM_2 = ['python', 'ia-dummy.py']
+PROGRAM_2 = ['python', 'ia-dummy02.py']
 WIDTH, HEIGHT = 500, 500
 GRID_SIZE = 5
 ARR = []
