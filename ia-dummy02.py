@@ -31,7 +31,7 @@ def find_positions(board_matrix, player_id):
 def manhattan_distance(pos1, pos2):
     """Calcula a distância de Manhattan entre dois pontos."""
     if pos1 is None or pos2 is None:
-        return float('inf') # Distância infinita se um dos pontos não existir
+        return float('inf') 
     return abs(pos1[0] - pos2[0]) + abs(pos1[1] - pos2[1])
 
 def get_adjacent_positions(pos):
@@ -82,10 +82,10 @@ def move_towards(my_pos, target_pos, occupied_pos=None):
         if target_y > my_y and (0, 1) in best_moves: return "down"
         if target_y < my_y and (0, -1) in best_moves: return "up"
         # Se a diagonal for a melhor e estiver disponível
-        if target_x > my_x and target_y > my_y and (1, 1) in best_moves: return "down" # Coordenadas Pygame
-        if target_x < my_x and target_y > my_y and (-1, 1) in best_moves: return "down" # Coordenadas Pygame
-        if target_x > my_x and target_y < my_y and (1, -1) in best_moves: return "up"   # Coordenadas Pygame
-        if target_x < my_x and target_y < my_y and (-1, -1) in best_moves: return "up"   # Coordenadas Pygame
+        if target_x > my_x and target_y > my_y and (1, 1) in best_moves: return "down" 
+        if target_x < my_x and target_y > my_y and (-1, 1) in best_moves: return "down"
+        if target_x > my_x and target_y < my_y and (1, -1) in best_moves: return "up"  
+        if target_x < my_x and target_y < my_y and (-1, -1) in best_moves: return "up" 
 
         # Retorna o primeiro melhor movimento se não houver prioridade clara
         dx, dy = best_moves[0]
@@ -94,7 +94,7 @@ def move_towards(my_pos, target_pos, occupied_pos=None):
         elif dy == 1: return "down"
         elif dy == -1: return "up"
 
-    return "block" # Não deve chegar aqui em cenários normais
+    return "block" 
 
 # --- Lógica Principal para ia-phost.py (Melhorado) ---
 
